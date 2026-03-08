@@ -5,4 +5,6 @@ locals {
         Environment = var.environment
         Terraform   = "true"
     }
+
+    ec2_final_tags = merge(local.common_tags, var.tags)
 }
